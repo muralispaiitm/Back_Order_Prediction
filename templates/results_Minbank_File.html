@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style> div.scroll { overflow: auto; } </style>
+</head>
+
+<body>
+<div class="scroll">
+    <! Back Button --------------------------------------- >
+    <button type="button" class="round-button"><a style="text-decoration:none"; href="/" ><</a></a></button>
+    <script> function goBack() { window.history.back();} </script>
+
+    <! Title Name  --------------------------------------- >
+    <div class="container"><center><h1> Minbank Prediction </h1></center></div>
+
+    <! Asking user to enter student details  --------------------------------------- >
+    <div class="container">
+        <center>
+            <! Table Starts ----------------- >
+            <table>
+                <tr>
+                    <th align="left"> Result </th>
+                    <td> : </td>
+                    <td> {{results["result"]}} </td>
+                </tr>
+                <tr>
+                    <th align="left"> source_file_path </th>
+                    <td> : </td>
+                    <td> {{results["source_file_path"]}} </td>
+                </tr>
+                <tr>
+                    <th align="left"> destination_file_path </th>
+                    <td> : </td>
+                    <td> {{results["destination_file_path"]}} </td>
+                </tr>
+            </table>
+    </div>
+</div>
+</body>
+</html>

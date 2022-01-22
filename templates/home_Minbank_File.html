@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style> div.scroll { overflow: auto; } </style>
+</head>
+
+<body>
+<div class="scroll">
+    <! Back Button --------------------------------------- >
+    <button type="button" class="round-button"><a style="text-decoration:none"; href="/" ><</a></a></button>
+    <script> function goBack() { window.history.back();} </script>
+
+    <! Title Name  --------------------------------------- >
+    <div class="container"><center><h1> Minbank Prediction </h1></center></div>
+
+    <! Asking user to enter student details  --------------------------------------- >
+    <div class="container">
+        <form action="{{ url_for('predict_Minbank_File')}}" method="POST">
+            <center>
+                <! Table Starts ----------------- >
+                <table>
+                    <! 1st row ------------------ >
+                    <tr>
+                        <th align="left"> Enter Path of the File </th>
+                        <th align="center"> : </th>
+                        <td align="left" colspan="2"><input type="text" required="required" name="file_path" id="file_path" placeholder="Files_Storage/DataSet/Predicting/Testing_BOP_Minbank_Without_Target.csv" size="70"></td>
+                    </tr>
+                </table>
+
+                <! Button  --------------------------------------- >
+                <button type="submit" class="btn"> Predict </button>
+            </center>
+        </form>
+    </div>
+</div>
+</body>
+</html>

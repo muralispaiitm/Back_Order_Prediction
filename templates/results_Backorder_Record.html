@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style> div.scroll { overflow: auto; } </style>
+</head>
+
+<body>
+<div class="scroll">
+    <! Back Button --------------------------------------- >
+    <button type="button" class="round-button"><a style="text-decoration:none"; href="/" ><</a></a></button>
+    <script> function goBack() { window.history.back();} </script>
+
+    <! Title Name  --------------------------------------- >
+    <div class="container"><center><h1> Backorder Prediction </h1></center></div>
+
+    <! Asking user to enter student details  --------------------------------------- >
+    <div class="container">
+        <center>
+            <table align="centre">
+                {% for col in data.columns %}
+                <tr>
+                    <th align="left"> {{col}} </th>
+                    <td> : </td>
+                    <td> {{data.loc[0,col]}} </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <table align="centre">
+                <tr>
+                    <th> <h3> Result </h3></th>
+                    <td> : </td>
+                    <td> <h4>{{results["result"]}}</h4> </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</div>
+</body>
+</html>

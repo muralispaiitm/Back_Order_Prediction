@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style> div.scroll { overflow: auto; } </style>
+</head>
+
+<body>
+<div >
+    <! Back Button --------------------------------------- >
+    <button type="button" class="round-button"><a style="text-decoration:none"; href="/" ><</a></a></button>
+    <script> function goBack() { window.history.back();} </script>
+
+    <! Title Name  --------------------------------------- >
+    <div class="container"><center><h1> Minbank Prediction </h1></center></div>
+
+    <! Asking user to enter student details  --------------------------------------- >
+    <div class="container" >
+        <form action="{{ url_for('predict_Minbank_Record')}}" method="POST">
+            <center>
+                <! Table_01 Starts  --------------------------------------- >
+                <table>
+                    <! 1st row ----------- >
+                    <tr>
+                        <th align="right">national_inv</th>
+                        <td><input type="number" required="required" name="national_inv"         id="national_inv"        placeholder="ex: 2.0, 8.0"></td>
+                    </tr>
+                    <! 2nd row ----------- >
+                    <tr>
+                        <th align="right">lead_time</th>
+                        <td><input type="number" required="required" name="lead_time"     id="lead_time"    placeholder="ex: 9.0, 8.0"></td>
+                    </tr>
+                    <! 3rd row ----------- >
+                    <tr>
+                        <th align="right">in_transit_qty</th>
+                        <td><input type="number" required="required" name="in_transit_qty"       id="in_transit_qty"      placeholder="ex: 0.0, 0.0"></td>
+                    </tr>
+                    <! 4th row ----------- >
+                    <tr>
+                        <th align="right">forecast_6_month</th>
+                        <td><input type="number" required="required" name="forecast_6_month"      id="forecast_6_month"      placeholder="ex: 0.0, 0.0"></td>
+                    </tr>
+                    <! 5th row ----------- >
+                    <tr>
+                        <th align="right">sales_3_month</th>
+                        <td><input type="number" required="required" name="sales_3_month"        id="sales_3_month"       placeholder="ex: 0.0, 0.0"></td>
+                    </tr>
+                    <! 6th row ----------- >
+                    <tr>
+                        <th align="right">perf_6_month_avg</th>
+                        <td><input type="number" required="required" name="perf_6_month_avg"        id="perf_6_month_avg"       placeholder="ex: 0.0, 0.0"></td>
+                    </tr>
+
+                    <! 7th row ------------------ >
+                    <tr>
+                        <th align="right"> pieces_past_due </th>
+                        <td align="center"> <input type="number" name="pieces_past_due" id="pieces_past_due" placeholder="ex: 4, 8"/>
+                    </tr>
+                    <! 8th row ------------------ >
+                    <tr>
+                        <th align="right"> local_bo_qty </th>
+                        <td align="center"> <input type="number" name="local_bo_qty" id="local_bo_qty" placeholder="ex: 2, 1"/>
+                    </tr>
+
+                    <! 9th row ------------------ >
+                    <tr>
+                        <th align="right"> deck_risk </th>
+                        <td align="center"> <input type="number" name="deck_risk" id="deck_risk" placeholder="0 | 1"/>
+                    </tr>
+                    <! 10th row ------------------ >
+                    <tr>
+                        <th align="right"> ppap_risk </th>
+                        <td align="center"> <input type="number" name="ppap_risk" id="ppap_risk" placeholder="0 | 1"/>
+                    </tr>
+                    <! 11th row ------------------ >
+                    <tr>
+                        <th align="right"> stop_auto_buy </th>
+                        <td align="center"> <input type="number" name="stop_auto_buy" id="stop_auto_buy" placeholder="0 | 1"/>
+                    </tr>
+                    <! 12th row ------------------ >
+                    <tr>
+                        <th align="right"> oe_constraint </th>
+                        <td align="center"> <input type="number" name="oe_constraint" id="oe_constraint" placeholder="0 | 1"/>
+                    </tr>
+                    <! 13th row ------------------ >
+                    <tr>
+                        <th align="right"> potential_issue </th>
+                        <td align="center"> <input type="number" name="potential_issue" id="potential_issue" placeholder="0 | 1"/>
+                    </tr>
+                    <! 14th row ------------------ >
+                    <tr>
+                        <th align="right"> rev_stop </th>
+                        <td align="center"> <input type="number" name="rev_stop" id="rev_stop" placeholder="0 | 1"/>
+                    </tr>
+                </table>
+
+                <! Button  --------------------------------------- >
+                <button type="submit" class="btn"> Predict </button>
+            </center>
+        </form>
+    </div>
+</div>
+</body>
+</html>

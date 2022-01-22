@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+<div class="container"><center><h1> BACKORDER | MINBANK </h1><br></center></div>
+<br><br><br>
+ <div class="container">
+     <center>
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr align="centre"> <center> <h3>  |------------ Backorder ------------| </h3> </center> </tr>
+                            <tr>
+                                <td> <form action="{{url_for('backorderTraining')}}" method="POST"> <button type="submit" class="btn"> <h3> Training </h3> </button> </form> </td>
+                                <td> | </td>
+                                <td> <form action="{{url_for('home_Backorder_Record')}}" method="POST"> <button type="submit" class="btn"> <h3> Predicting Record </h3> </button> </form> </td>
+                                <td> <form action="{{url_for('home_Backorder_File')}}" method="POST"> <button type="submit" class="btn"> <h3> Predicting File </h3> </button> </form> </td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td> ..................................... </td>
+                    <td>
+                        <table>
+                            <tr align="centre"> <centre> <h3> |------------- Minbank -------------| </h3> </centre> </tr>
+                            <tr>
+                                <td> <form action="{{url_for('minbankTraining')}}" method="POST"> <button type="submit" class="btn"> <h3> Training </h3> </button> </form> </td>
+                                <td> | </td>
+                                <td> <form action="{{url_for('home_Minbank_Record')}}" method="POST"> <button type="submit" class="btn"> <h3> Predicting Record </h3> </button> </form> </td>
+                                <td> <form action="{{url_for('home_Minbank_File')}}" method="POST"> <button type="submit" class="btn"> <h3> Predicting File </h3> </button> </form> </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+     </center>
+ </div>
+
+</body>
+<br>
+</html>

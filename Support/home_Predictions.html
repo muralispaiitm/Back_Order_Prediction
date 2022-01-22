@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+    <meta charset="UTF-8">
+    <title>ML API</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+<div class="container"><center><h1> Select Prediction Type </h1><br></center></div>
+<br><br><br>
+ <div class="container">
+     <center>
+        <div class="box">
+            <form action="{{url_for('runTemplate')}}" method="POST">
+               <select name="input_type" id="input_type" required="required" >
+                   <option hidden="hidden" value="" > Predict Type </option>
+                   <option value="backorder"> Predict Backorder </option>
+                   <option value="minbank"> Predict Minbank </option>
+               </select>
+                <button type="submit" class="btn"> Go > </button>
+                <table>
+                    <tr>
+                        <td align="center"> <input type="checkbox" name="record" value="yes" id="record" />
+                            <label for="record"> Record </label>
+                        </td>
+                        <td>    </td>
+                        <td align="center"><input type="checkbox" name="file" value="yes" id="file"/>
+                            <label for="file"> File </label>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+     </center>
+ </div>
+
+</body>
+<br>
+</html>

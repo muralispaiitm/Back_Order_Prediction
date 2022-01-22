@@ -1,0 +1,19 @@
+flask 		: pip install Flask
+request 	: pip install requests
+os 		: pip install os-sys
+numpy 		: pip install numpy
+pandas 		: pip install pandas
+joblib 		: pip install joblib
+datatime 	: 
+sklearn		: pip install sklearn
+matplotlib 	: pip install matplotlib
+seaborn 	: pip install seaborn
+XGBClassifier 	: pip install xgboost
+imblearn 	: pip install imblearn
+		  pip install imbalanced-learn
+
+mysql		: pip install MySQL-python
+json		: pip install jsons
+shutil		: pip install pytest-shutil
+glob		: pip install glob2
+
